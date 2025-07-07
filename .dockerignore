@@ -1,0 +1,9 @@
+node_modules
+.docusaurus
+.git
+.gitignore
+README.md
+.env
+.nyc_output
+coverage
+.cache
