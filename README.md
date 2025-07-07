@@ -1,0 +1,1 @@
+# docusaurus-in-docker-to-azure-web-app-example
