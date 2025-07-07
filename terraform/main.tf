@@ -50,10 +50,9 @@ resource "azurerm_linux_web_app" "docusaurus" {
   site_config {
     always_on = false
 
-    # Placeholder image for initial deploy
     application_stack {
-      docker_image_name        = "${data.azurerm_container_registry.docusaurus.login_server}/${var.image_name}:latest"
-      docker_registry_url      = "https://${data.azurerm_container_registry.docusaurcus.login_server}"
+      docker_image_name        = "${var.image_name}:latest"
+      docker_registry_url      = "https://${azurerm_container_registry.docusaurus.login_server}"
       docker_registry_username = azurerm_container_registry.docusaurus.admin_username
       docker_registry_password = azurerm_container_registry.docusaurus.admin_password
     }
